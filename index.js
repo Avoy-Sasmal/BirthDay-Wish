@@ -20,7 +20,7 @@ const bgMusic   = document.getElementById('bg-music');
       width:${Math.random()*3+1}px;
       height:${Math.random()*3+1}px;
       border-radius:50%;
-      background:rgba(255,255,255,${Math.random()*0.7+0.1});
+      background:rgba(192,99,122,${Math.random()*0.35+0.08});
       left:${Math.random()*100}%;
       top:${Math.random()*100}%;
       animation: twinkle ${Math.random()*4+2}s ease-in-out ${Math.random()*3}s infinite;
@@ -174,7 +174,7 @@ function initParticles() {
       vy: -Math.random() * 0.6 - 0.2,
       alpha: Math.random() * 0.6 + 0.1,
       alphaDir: Math.random() > 0.5 ? 0.005 : -0.005,
-      color: [`#f4a0b5`, `#f5c88a`, `#c39bd3`, `#ffffff`][Math.floor(Math.random() * 4)]
+      color: [`#c0637a`, `#c9963a`, `#e8899a`, `#d4a0b0`][Math.floor(Math.random() * 4)]
     });
   }
 
@@ -216,7 +216,7 @@ function launchHearts() {
     h.style.opacity  = `${Math.random() * 0.6 + 0.3}`;
     const dur = Math.random() * 6 + 7;
     h.style.animationDuration = `${dur}s`;
-    h.style.color = ['#f4a0b5','#f5c88a','#c39bd3','#fff'][Math.floor(Math.random()*4)];
+    h.style.color = ['#c0637a','#c9963a','#e8899a','#d4a0b0'][Math.floor(Math.random()*4)];
     finale.appendChild(h);
     setTimeout(() => h.remove(), dur * 1000);
   }, 700);
