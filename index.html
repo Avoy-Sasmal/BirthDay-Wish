@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A breathtaking, interactive birthday gift website — crafted with love." />
+  <title>Happy Birthday, My Love 🌹</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Background music (swap src for your audio file) -->
+  <audio id="bg-music" loop preload="none">
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     1. WELCOME OVERLAY
+══════════════════════════════════════════════ -->
+<div id="welcome-overlay" role="dialog" aria-modal="true" aria-label="Birthday gift welcome screen">
+  <div class="welcome-particles"></div>
+
+  <img src="logo.png" alt="Our logo" class="welcome-logo" />
+
+  <h1 class="welcome-title">Something Special<br />Awaits You ✨</h1>
+  <p class="welcome-sub">A little gift, crafted with all my love</p>
+
+  <button id="open-btn" class="open-btn" aria-label="Open your birthday gift">
+    🎁 &nbsp; Click to Open Your Gift
+  </button>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     2. MAIN SITE (hidden until overlay dismissed)
+══════════════════════════════════════════════ -->
+<div id="main-site" style="display:none;">
+
+  <!-- ── NAV ── -->
+  <nav id="nav" aria-label="Site navigation">
+    <a href="#gallery-section" class="nav-logo">
+      <img src="logo.png" alt="Logo" />
+      <span>Our Story</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#gallery-section">Gallery</a></li>
+      <li><a href="#timeline-section">Moments</a></li>
+      <li><a href="#finale-section">Wish</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 2 — ANTIGRAVITY GALLERY
+  ══════════════════════════════════════════ -->
+  <section id="gallery-section" class="section">
+    <p class="section-label">Our Memories</p>
+    <h2 class="section-title">The Antigravity Gallery</h2>
+    <p class="section-desc">Moments we shared, floating forever — hover to pause, click to relive.</p>
+
+    <div class="gallery-arena" aria-label="Floating photo and video gallery">
+
+      <!-- Photo card 1 — image.png -->
+      <div class="float-card polaroid size-md anim-1"
+           data-type="image" data-src="image.png"
+           role="button" tabindex="0" aria-label="Open photo in full screen">
+        <img src="image.png" alt="Our memory" loading="lazy" />
+        <p class="polaroid-label">My favourite smile 🌸</p>
+      </div>
+
+      <!-- Video card 1 — vdo-1.mp4 -->
+      <div class="float-card glass-video size-sm anim-2"
+           data-type="video" data-src="vdo-1.mp4"
+           role="button" tabindex="0" aria-label="Play video 1">
+        <video src="vdo-1.mp4" muted playsinline preload="metadata"
+               style="pointer-events:none;" aria-hidden="true"></video>
+        <div class="play-overlay" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="rgba(255,255,255,0.9)">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+        <p class="vid-label">♡ Our Moment</p>
+      </div>
+
+      <!-- Video card 2 — vdo - 2.mp4 -->
+      <div class="float-card glass-video size-md anim-3"
+           data-type="video" data-src="vdo - 2.mp4"
+           role="button" tabindex="0" aria-label="Play video 2">
+        <video src="vdo - 2.mp4" muted playsinline preload="metadata"
+               style="pointer-events:none;" aria-hidden="true"></video>
+        <div class="play-overlay" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="rgba(255,255,255,0.9)">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+        <p class="vid-label">✦ A Memory</p>
+      </div>
+
+      <!-- Video card 3 — vdo-3.mp4 -->
+      <div class="float-card glass-video size-sm anim-4"
+           data-type="video" data-src="vdo-3.mp4"
+           role="button" tabindex="0" aria-label="Play video 3">
+        <video src="vdo-3.mp4" muted playsinline preload="metadata"
+               style="pointer-events:none;" aria-hidden="true"></video>
+        <div class="play-overlay" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="rgba(255,255,255,0.9)">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+        <p class="vid-label">🎬 Just Us</p>
+      </div>
+
+      <!-- Logo / photo card 2 -->
+      <div class="float-card polaroid size-sm anim-5"
+           data-type="image" data-src="logo.png"
+           role="button" tabindex="0" aria-label="Open logo photo in full screen">
+        <img src="logo.png" alt="Logo memory" loading="lazy" />
+        <p class="polaroid-label">Always & Forever ♾️</p>
+      </div>
+
+    </div><!-- /.gallery-arena -->
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 3 — TIMELINE + LOVE LETTER
+  ══════════════════════════════════════════ -->
+  <section id="timeline-section" class="section">
+    <p class="section-label">Our Journey</p>
+    <h2 class="section-title">Our Best Moments</h2>
+    <p class="section-desc">Every chapter of us, written in stars.</p>
+
+    <div class="timeline-wrapper" aria-label="Our love story timeline">
+
+      <!-- Timeline Item 1 -->
+      <div class="timeline-item from-left" role="article">
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <div class="timeline-content">
+          <p class="tl-date">The Beginning ✦</p>
+          <h3 class="tl-heading">The Day We Met</h3>
+          <p class="tl-text">
+            The universe conspired to bring two lost souls together.
+            I didn't know it then, but that was the most important day of my life.
+          </p>
+        </div>
+      </div>
+
+      <!-- Timeline Item 2 -->
+      <div class="timeline-item from-right" role="article">
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <div class="timeline-content">
+          <p class="tl-date">The First Chapter 🌸</p>
+          <h3 class="tl-heading">Our First Adventure</h3>
+          <p class="tl-text">
+            Laughing until our stomachs hurt, getting lost together —
+            and realising that being lost with you felt exactly like home.
+          </p>
+        </div>
+      </div>
+
+      <!-- Timeline Item 3 -->
+      <div class="timeline-item from-left" role="article">
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <div class="timeline-content">
+          <p class="tl-date">Growing Together 🌹</p>
+          <h3 class="tl-heading">Through Every Season</h3>
+          <p class="tl-text">
+            We've danced in joy and held each other in silence.
+            Every moment — big or small — with you is precious.
+          </p>
+        </div>
+      </div>
+
+      <!-- Timeline Item 4 -->
+      <div class="timeline-item from-right" role="article">
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <div class="timeline-content">
+          <p class="tl-date">Today & Always ✨</p>
+          <h3 class="tl-heading">Your Birthday, My Favourite Day</h3>
+          <p class="tl-text">
+            Today the world celebrates the day you were born —
+            and I get to celebrate the person who made my world complete.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /.timeline-wrapper -->
+
+    <!-- Love Letter -->
+    <div class="love-letter-box" aria-label="Personal love letter">
+      <h3 class="letter-heading">A letter, just for you…</h3>
+      <div id="typed-letter" aria-live="polite"></div>
+      <span class="typing-cursor" aria-hidden="true"></span>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 4 — GRAND FINALE
+  ══════════════════════════════════════════ -->
+  <section id="finale-section" class="section">
+
+    <!-- Particle canvas -->
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+    <div class="finale-content">
+      <p class="section-label">Today Is Your Day 🎂</p>
+      <h2 class="finale-wish">
+        Happy Birthday,<br />My Everything ✨
+      </h2>
+      <p class="finale-sub">
+        May this year bring you every dream you've whispered to the stars —
+        all the joy, magic, and love you so beautifully deserve.
+      </p>
+
+      <div class="message-card">
+        <p>
+          "You are not just my girlfriend — you are my home,<br />
+          my calm, my greatest adventure.<br />
+          I love you more than all the stars combined. 🌹"
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+</div><!-- /#main-site -->
+
+<!-- ── LIGHTBOX MODAL ── -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Media viewer" tabindex="-1">
+  <div class="lightbox-inner">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close media viewer">✕</button>
+    <div id="lightbox-media"></div>
+  </div>
+</div>
+
+<script src="index.js" defer></script>
+</body>
+</html>
